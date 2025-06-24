@@ -10,8 +10,11 @@ public class AdditionControllerTest {
 
   @Test
   void test_addition() {
-    assertEquals(2, controller.addition(1, 1));
-    // System.out.println(controller.addition(1, 1));
+    assertEquals(3, controller.addition(1, 2));
+  }
 
+  @Test
+  void test_addition_no_overflow() {
+    assertEquals(3_000_000_000L, controller.addition(1_000_000_000, 2_000_000_000));
   }
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AdditionController {
 
   @GetMapping("/add")
-  public double addition(@RequestParam double a, @RequestParam double b) {
+  public long addition(@RequestParam long a, @RequestParam long b) {
     return a + b;
   }
 }
